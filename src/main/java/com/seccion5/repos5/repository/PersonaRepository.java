@@ -55,7 +55,12 @@ public class PersonaRepository {
         return null;
     }
 
-
-
-    
+    public String delete(int id){ //Puede ser void pero quiero que devuelva un mensaje
+        Persona kill = read(id);
+        if (kill != null){
+            personas.remove(kill);
+            return "Persona matada";
+        }
+        return "Persona no encontrada";
+    }
 }

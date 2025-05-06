@@ -29,6 +29,10 @@ public class PersonaService {
     public Persona modificarPersona(int id, Persona pmod){
         return personaRepository.update(id, pmod);
     }
+
+    public String elminarPersona(int id){
+        return personaRepository.delete(id);
+    }
 }
 
 
